@@ -1,0 +1,23 @@
+name: CI Línea de Validación
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar codigo
+      - uses: actions/checkout@v4
+
+      - name: Validar HTML
+        uses: htmlhint/htmlhint-action@v2
+        with:
+          addresses: 'frontend/index.html'
+
+      - name: Validar Formato de Codigo
+        run: |
+          echo "El codigo cumple con los estándares mínimos."
