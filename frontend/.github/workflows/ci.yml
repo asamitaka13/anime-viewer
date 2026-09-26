@@ -1,4 +1,4 @@
-name: CI Línea de Validación
+name: CI Linea de Validacion
 
 on:
   push:
