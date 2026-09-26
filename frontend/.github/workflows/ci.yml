@@ -16,7 +16,7 @@ jobs:
       - name: Validar HTML
         uses: htmlhint/htmlhint-action@v2
         with:
-          addresses: 'frontend/index.html'
+          addresses: './frontend/index.html'
 
       - name: Validar Formato de Codigo
         run: |
