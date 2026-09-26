@@ -24,3 +24,7 @@ jobs:
       - name: Validar Formato de Codigo
         run: |
           echo "El codigo cumple con los estándares mínimos."
+
+      - name: Disparar despliegue en Render via webhook
+        run: |
+          curl -X POST "${{ secrets.RENDER_DEPLOY_HOOK }}"
