@@ -13,10 +13,13 @@ jobs:
       - name: Descargar codigo
         uses: actions/checkout@v4
 
-      - name: Validar HTML
-        uses: htmlhint/actions-htmlhint@v1
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
         with:
-          htmlhint-args: './frontend/index.html'
+          node-version: '20'
+
+      - name: Validar HTML con HTMLHint
+        run: npx htmlhint frontend/index.html
 
       - name: Validar Formato de Codigo
         run: |
