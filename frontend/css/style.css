@@ -1,0 +1,91 @@
+/* Fondo de la página y tipografía general */
+body {
+    background-color: #121212; /* Fondo oscuro sutil */
+    color: #e0e0e0;            /* Texto gris claro para evitar fatiga visual */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    display: flex;
+    justify-content: center;   /* Centra la lista horizontalmente */
+    align-items: center;       /* Centra la lista verticalmente */
+    height: 100vh;             /* Usa todo el alto de la pantalla */
+    margin: 0;
+}
+
+/* ... (mantiene los estilos que ya tenías en body) ... */
+
+/* Contenedor para alinear los textos y la lista en bloque */
+.contenedor-principal {
+    text-align: center;        /* Centra de forma automática todos los textos internos */
+    width: 100%;
+    max-width: 320px;          /* Mantiene el mismo ancho que tu lista */
+    padding: 20px;
+}
+
+/* Estilos para el Título Principal */
+.titulo-principal {
+    color: #ffffff;            /* Blanco puro para que resalte */
+    font-size: 28px;           /* Tamaño grande pero elegante */
+    font-weight: 600;          /* Grosor semi-negrita */
+    margin: 0 0 8px 0;         /* Elimina márgenes extra y deja 8px abajo */
+    letter-spacing: -0.5px;    /* Junta ligeramente las letras (look premium) */
+}
+
+/* Estilos para el Subtítulo */
+.subtitulo {
+    color: #888888;            /* Gris opaco para dar jerarquía visual */
+    font-size: 14px;           /* Más pequeño que el título */
+    margin: 0 0 32px 0;        /* Deja un buen espacio (32px) antes de que empiece la lista */
+    font-weight: 400;
+}
+
+/* Ajuste sutil para tu lista existente */
+.mi-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: left;          /* Hace que el TEXTO de la lista se alinee a la izquierda, */
+                               /* manteniendo un look limpio de código. */
+}
+
+/* ... (el resto de tus estilos li, li:hover y li::before se quedan igual) ... */
+
+
+/* Estilo de cada elemento de la lista */
+.mi-lista li {
+    padding: 14px 0;           /* Espaciado limpio arriba y abajo */
+    border-bottom: 1px solid #2c2c2c; /* Línea divisoria sutil oscura */
+    font-size: 16px;
+    letter-spacing: 0.5px;     /* Separa ligeramente las letras */
+    display: flex;
+    align-items: center;
+    transition: all 0.2s ease; /* Transición suave para el efecto hover */
+}
+
+/* Quita la línea divisoria al último elemento */
+.mi-lista li:last-child {
+    border-bottom: none;
+}
+
+/* Efecto interactivo al pasar el mouse (Hover) */
+.mi-lista li:hover {
+    color: #ffffff;            /* El texto se ilumina a blanco puro */
+    transform: translateX(4px); /* Desplazamiento mínimo hacia la derecha */
+    cursor: pointer;
+}
+
+/* Pequeño punto minimalista decorativo antes del texto */
+.mi-lista li::before {
+    content: "";
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    background-color: #555555; /* Punto gris muy discreto */
+    border-radius: 50%;
+    margin-right: 12px;
+    transition: background-color 0.2s ease;
+}
+
+/* El punto decorativo también cambia de color al pasar el mouse */
+.mi-lista li:hover::before {
+    background-color: #00adb5; /* Color de acento turquesa */
+}
